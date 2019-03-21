@@ -20,9 +20,9 @@
         <tbody>
             <tr *ngFor="let activiteitplanning of (activiteitenPlanning | async)">
                 <td>
-                    Naam:{{ activiteitplanning.activiteit.naam }}
+                    {{ activiteitplanning.activiteit.naam }}
                 </td>
-                <td>Datum:{{ activiteitplanning.actdate }}</td>
+                <td>{{ activiteitplanning.actdate }}</td>
                 <td>
                     {{ activiteitplanning.actprijs | currency: "EUR" }}
                 </td>
