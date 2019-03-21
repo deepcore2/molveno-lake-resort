@@ -45,7 +45,7 @@ export class ActiviteitResService {
   //
 
   async getReservering(): Promise<ActiviteitResEntity[]> {
-    return this.activiteitResRepository.find({ relations: ['planning'] });
+    return this.activiteitResRepository.find({ relations: ['planning', 'planning.activiteit'] });
   }
 
   public updateReservering(

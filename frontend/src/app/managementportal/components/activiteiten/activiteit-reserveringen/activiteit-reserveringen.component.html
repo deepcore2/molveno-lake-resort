@@ -20,10 +20,10 @@
         <tbody>
             <tr *ngFor="let reservering of (reserveringen | async)">
                 <td>
-                    <!-- {{reservering.planning.activiteit.naam}} -->
+                    {{reservering.planning.activiteit.naam}}
                 </td>
                 <td>
-                    <!-- {{reservering.planning.actdate}} -->
+                    {{reservering.planning.actdate}}
                 </td>
                 <td>
                     {{reservering.emailGast}}/{{reservering.phoneGast}}

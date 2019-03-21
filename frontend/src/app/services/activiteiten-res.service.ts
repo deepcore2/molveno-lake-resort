@@ -16,22 +16,23 @@ export class ActiviteitenResService {
   private static activiteitResToActiviteitResMapper(
     reservering: IActiviteitres[]
   ): ActiviteitRes[] {
-    return reservering.map(
-      ActiviteitenResService.activiteitResToActiviteitMapper
-    );
+      return reservering
+    // return reservering.map(
+    //   ActiviteitenResService.activiteitResToActiviteitMapper
+    // );
   }
 
-  private static activiteitResToActiviteitMapper(
-    reservering: IActiviteitres
-  ): ActiviteitRes {
-    return new ActiviteitRes(
-      reservering.resid,
-      reservering.planid,
-      reservering.emailGast,
-      reservering.phoneGast,
-      reservering.aantalPersonen
-    );
-  }
+  // private static activiteitResToActiviteitMapper(
+  //   reservering: IActiviteitres
+  // ): ActiviteitRes {
+  //   return new ActiviteitRes(
+  //     reservering.resid,
+  //     reservering.planid,
+  //     reservering.emailGast,
+  //     reservering.phoneGast,
+  //     reservering.aantalPersonen
+  //   );
+  // }
 
   getAllActiviteitenRes(): Observable<ActiviteitRes[]> {
     return this.http
